@@ -5,13 +5,13 @@
     
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.top-postion{
     width: 100%;
-    min-width: 1024px;
-    height: 100%;
+    position: absolute;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-bar{
@@ -23,8 +23,8 @@
     padding: 0px 0px;
     margin: auto;
     align-items: center;
-    position:absolute;
-    top: 20px;
+    position: absolute;
+    top: 10px;
     background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#666), color-stop(0.5, #5e5e5e), color-stop(0.51, #707070), to(#808080)); 
     font-weight: 100;
 }
@@ -65,55 +65,58 @@
     color: white;
 
 }
-
-
-
 .nav-search{
     background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#666), color-stop(0.5, #5e5e5e), color-stop(0.51, #707070), to(#808080)); 
     padding: 3px 0px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-
     padding: 7.6px 10px
 }
-
-
-
-.content{
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    max-width: 1400px;
-    min-width: 1024px;
-    width: 1440px;
-}
-
-
-.image-rows{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    max-width: 1440px;
-    overflow: hidden;
-    margin: 0;
-    height: 200px;
-        
-}
-.images{
-    
-}
 .image-container{
-    width: 1440px;
+    
     background: url(../images/hero-background.jpg) 50% 100% no-repeat;
     background-size: 1440px 1315px;
-
+    grid-area: image-container;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
     
 }
-.center-text{
+.image-container *{
+    font-weight: 100;
+    font-family: sans-serif;
+    line-height: 3rem;
+}
+.image-1{
+    grid-area: image-1;
+}
+
+.image-2{
+    grid-area: image-2;
+}
+
+.image-3{
+    grid-area: image-3;
+}
+.image-4{
+    grid-area: image-4;
+}
+
+.container{
     position: relative;
-    top: 50%;
-    text-align: center;
-    font-size: 1.2rem;
-    color: white;
-    font-weight:lighter;
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 25%); 
+    grid-template-rows: repeat(2, auto);
+    overflow: hidden;
+    grid-template-areas:"image-container image-container image-container image-container "
+                        "image-1 image-2 image-3 image-4";
+
 }
 
 footer{
@@ -138,18 +141,3 @@ footer a{
     color: #2f99d2;
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
