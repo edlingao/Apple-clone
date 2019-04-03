@@ -107,7 +107,6 @@
 
 .container{
     position: relative;
-    width: 80%;
     max-width: 1400px;
     margin: auto;
     display: grid;
